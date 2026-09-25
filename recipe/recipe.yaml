@@ -58,6 +58,7 @@ tests:
       run:
         - coverage >=7.13.0
         - pytest >=9.0.3
+        - cx_freeze >=8.7.0
         - if: not win
           then:
             - cabarchive >=0.2.4

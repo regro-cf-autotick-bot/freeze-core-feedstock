@@ -2,8 +2,8 @@ schema_version: 1
 
 context:
   name: freeze-core
-  version: "0.7.5"
-  sha256: 232c304edcba47204bacd36af66d6411664557bdd7ad1aa7c0248f751723b54d
+  version: "0.7.6"
+  sha256: 2f6d885205e3aa36854f414841380b6ee7cf8eda6733a4e141e34c4575890039
 
 package:
   name: ${{ name|lower }}
@@ -14,7 +14,7 @@ source:
   sha256: ${{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   skip: match(python, "<3.11")
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   dynamic_linking:

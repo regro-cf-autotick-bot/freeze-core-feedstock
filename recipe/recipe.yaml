@@ -58,12 +58,12 @@ tests:
       run:
         - coverage >=7.13.0
         - pytest >=9.0.3
-        - cx_freeze
         - if: not win
           then:
             - cabarchive >=0.2.4
             - striprtf >=0.0.26
     script:
+      - conda install cx_freeze --no-deps
       - coverage run -m pytest tests -k "not venv"
 
 about:
